@@ -1,0 +1,19 @@
+version: "3"
+
+networks:
+  web:
+    external: true
+  internal:
+    external: false
+
+services:
+  amazon-login-frontend:
+    image: docker.beetlock.com/amazon-login-frontend
+    labels:
+      - traefik.backend=amazon-login-frontend
+      - traefik.frontend.rule=Host:amazon.wolnik.co.uk
+      - traefik.docker.network=web
+      - traefik.port=80
+    networks:
+      - internal
+      - web

@@ -1,0 +1,13 @@
+$primary-color: #00a6a6;
+$second-color: #bbdef0;
+$third-color: #efca08;
+$fourth-color: #f49f0a;
+
+$text-color: #333;
+
+body {
+  color: $text-color;
+  background-color: $second-color;
+  font-family: sans-serif;
+  margin: 50px 100px;
+}
