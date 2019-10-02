@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./style.scss" />
     <title>Amazon Login Test</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="root"></div>
+    <div id="amazon-root"></div>
     <script src="./index.js"></script>
-</body>
-
+    <script>
+      window.onAmazonLoginReady = function() {
+        amazon.Login.setClientId(
+          "amzn1.application-oa2-client.00f745d11d8a4b3c8d3ca4eb557a72f4"
+        );
+      };
+      (function(d) {
+        var a = d.createElement("script");
+        a.type = "text/javascript";
+        a.async = true;
+        a.id = "amazon-login-sdk";
+        a.src = "https://assets.loginwithamazon.com/sdk/na/login1.js";
+        d.getElementById("amazon-root").appendChild(a);
+      })(document);
+    </script>
+  </body>
 </html>
