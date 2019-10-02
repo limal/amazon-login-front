@@ -8,7 +8,7 @@ export const AmazonLoginButton = () => {
     options.scope_data = {
       profile: { essential: true }
     };
-    window.amazon.Login.authorize(options, "http://localhost:1234");
+    window.amazon.Login.authorize(options, "https://amazon.wolnik.co.uk"); // http://localhost:1234
     return false;
   };
 
