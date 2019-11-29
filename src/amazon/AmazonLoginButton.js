@@ -1,5 +1,6 @@
 import React from "react";
 
+// Test CI
 export const AmazonLoginButton = () => {
   const login = () => {
     console.log("%c* login", "background: #f00; color: #fff");
