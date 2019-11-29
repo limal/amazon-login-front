@@ -5,7 +5,7 @@ export const AmazonLoginButton = () => {
   const login = () => {
     console.log("%c* login", "background: #f00; color: #fff");
     const options = {};
-    options.scope = "profile";
+    options.scope = "profile postal_code";
     options.scope_data = {
       profile: { essential: true }
     };
