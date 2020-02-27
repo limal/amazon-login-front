@@ -11,7 +11,10 @@ export const Home = () => {
     postcode: ""
   });
   const location = useLocation();
-  const query = queryString.parse(location.search);
+  const query = queryString.parse(location.hash); // for popup-less use location.hash instead of location.search
+
+  console.log('%c* location.search', 'background: #fc0; color: #333', location.hash);
+  console.log('%c* query', 'background: #f00; color: #fff', query);
 
   if (query.access_token && query.access_token.length) {
     setTimeout(() => {
