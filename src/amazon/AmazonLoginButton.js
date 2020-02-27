@@ -5,11 +5,13 @@ export const AmazonLoginButton = () => {
   const login = () => {
     console.log("%c* login", "background: #f00; color: #fff");
     const options = {};
+    options.popup = false;
     options.scope = "profile postal_code";
     options.scope_data = {
       profile: { essential: true }
     };
-    window.amazon.Login.authorize(options, "https://amazon.wolnik.co.uk"); // http://localhost:1234
+    // window.amazon.Login.authorize(options, "https://amazon.wolnik.co.uk"); // http://localhost:1234
+    window.amazon.Login.authorize(options, "http://localhost:1234");
     return false;
   };
 
